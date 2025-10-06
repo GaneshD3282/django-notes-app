@@ -3,13 +3,7 @@ pipeline {
     agent {label 'vinod'}
 
     stages {
-        stage('CW'){
-            steps{
-                script{
-                    docker_clean("notes-app" , "latest", "ganeshd2505")
-                }
-            }
-        }
+       
         stage('code') {
             steps {
                 script{
