@@ -6,7 +6,7 @@ pipeline {
         stage('CW'){
             steps{
                 script{
-                    docker_clean("ganeshd2505" , "notes-app", "latest")
+                    docker_clean("notes-app" , "latest", "ganeshd2505")
                 }
             }
         }
