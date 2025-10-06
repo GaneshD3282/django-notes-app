@@ -3,10 +3,10 @@ pipeline {
     agent {label 'vinod'}
 
     stages {
-        stage('hello'){
+        stage('CW'){
             steps{
                 script{
-                    hello()
+                    docker_clean("ganeshd2505","notes-app","latest")
                 }
             }
         }
@@ -37,8 +37,8 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                echo 'Deploying App'
-                sh "docker-compose up -d"
+               echo 'Deploying App'
+               deploy()
             }
         }
     }
